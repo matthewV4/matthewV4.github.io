@@ -34,7 +34,9 @@ I used CertUtil to obtain the SHA256 hash of the malicious executable file. Cert
 
 ![image](/assets/img/HB4.png)
 
-**Answer:** 12daa34111bb54b3dcbad42305663e44e7e6c3842f015cccbbe6564d9dfd3ea3
+~~~
+12daa34111bb54b3dcbad42305663e44e7e6c3842f015cccbbe6564d9dfd3ea3
+~~~
 
 # Task 2
 **Question:** When was the binary file originally created, according to its metadata (UTC)?
@@ -45,7 +47,9 @@ We can use a tool such as **PEStudio**, which is used for spotting suspicious ar
 
 ![image](/assets/img/HB5.png)
 
-**Answer:** 2024–03–13 10:38:06
+~~~
+2024–03–13 10:38:06
+~~~
 
 # Task 3
 **Question:** Examining the code size in a binary file can give indications about its functionality. Could you specify the byte size of the code in this binary?
@@ -54,7 +58,9 @@ While using PEStudio, we can navigate to the optional header (subsystem > GUI) t
 
 ![image](/assets/img/HB6.png)
 
-**Answer:** 38400
+~~~
+38400
+~~~
 
 # Task 4
 **Question:** It appears that the binary may have undergone a file conversion process. Could you determine its original filename?
@@ -63,7 +69,9 @@ We can find the original name of the file before the name change under the **res
 
 ![image](/assets/img/HB7.png)
 
-**Answer:** newILY.ps1
+~~~
+newILY.ps1
+~~~
 
 # Task 5 
 **Question:** Specify the hexadecimal offset where the obfuscated code of the identified original file begins in the binary.
@@ -72,7 +80,9 @@ To solve this, I used the tool **HxD**. After opening the file and scrolling unt
 
 ![image](/assets/img/HB8.png)
 
-**Answer:** 2C74
+~~~
+2C74
+~~~
 
 # Task 6 
 **Question:** The threat actor concealed the plaintext script within the binary. Can you provide the encoding method used for this obfuscation?
@@ -89,14 +99,18 @@ Step 2: Decode from Base64
 
 ![image](/assets/img/HB10.png)
 
-**Answer:** Base64
+~~~
+Base64
+~~~
 
 # Task 7 
 **Question:** What is the specific cmdlet utilized that was used to initiate file downloads?
 
 Following the deobfuscation of the Base64 encoded code, the cmdlet Invoke-WebRequest stands out, as it can be used to download files from the web. This is evident in the image above.
 
-**Answer:** Invoke-WebRequest
+~~~
+Invoke-WebRequest
+~~~
 
 # Task 8
 **Question:** Could you identify any possible network-related Indicators of Compromise (IoCs) after examining the code? Separate IPs by comma and in ascending order.
@@ -105,7 +119,9 @@ Using CyberChef, we can simply use the **Extract IP addresses** recipe and filte
 
 ![image](/assets/img/HB11.png)
 
-**Answer:** 35.169.66.138,44.206.187.144
+~~~
+35.169.66.138,44.206.187.144
+~~~
 
 # Task 9
 **Question:** The binary created a staging directory. Can you specify the location of this directory where the harvested files are stored?
@@ -114,14 +130,18 @@ The staging directory can be seen in the deobfuscated code being assigned to a v
 
 ![image](/assets/img/HB12.png)
 
-**Answer:** C:\Users\Public\Public Files
+~~~
+C:\Users\Public\Public Files
+~~~
 
 # Task 10 
 **Question:** What MITRE ID corresponds to the technique used by the malicious binary to autonomously gather data?
 
 Analyzing the deobfuscated code, we find that the script falls under the MITRE ATT&CK technique T1119 (Automated Collection)
 
-**Answer:** T1119
+~~~
+T1119
+~~~
 
 # Task 11
 **Question:** What is the password utilized to exfiltrate the collected files through the file transfer program within the binary?
@@ -130,7 +150,9 @@ Stepping through the code, we find the password used to exfiltrate the collected
 
 ![image](/assets/img/HB13.png)
 
-**Answer:** M8&C!i6KkmGL1-#
+~~~
+M8&C!i6KkmGL1-#
+~~~
 
 
 
