@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Heartbreaker-Continuum
-thumbnail-img: assets/img/HBThumbnail.png
 subtitle: HTB Sherlock Writeup
 gh-repo: daattali/beautiful-jekyll
 tags: HackTheBox, Windows, MalwareAnalysis
