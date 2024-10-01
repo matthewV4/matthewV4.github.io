@@ -39,7 +39,7 @@ I used CertUtil to obtain the SHA256 hash of the malicious executable file. Cert
 ~~~
 
 # Task 2
-**Question:** When was the binary file originally created, according to its metadata (UTC)?
+**Question:** When was the binary file originally created, according to its metadata (UTC)
 
 Sometimes, simply checking the properties of a malicious file will yield incorrect results for its metadata, especially the creation date, as malware authors may use tools to alter timestamps to make it appear as if the file was created at a different time. This technique is often referred to as Timestomping.
 
