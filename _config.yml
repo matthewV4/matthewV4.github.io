@@ -21,7 +21,7 @@ author: Matthew Schramm
 
 navbar-links:
   Resume: assets/Resume.pdf
- # About Me: "aboutme"
+  About Me: "Projects"
 #  Resources:
 #    - Beautiful Jekyll: "https://beautifuljekyll.com"
  #   - Learn markdown: "https://www.markdowntutorial.com/"
@@ -101,7 +101,7 @@ share-links-active:
 
 # How to display the link to your website in the footer
 # Remove this if you don't want a link in the footer
-url-pretty: "matthew-schramm.com"
+url-pretty: "matthew-schramm"
 
 # Add the website title to the title of every page
 title-on-all-pages: true
