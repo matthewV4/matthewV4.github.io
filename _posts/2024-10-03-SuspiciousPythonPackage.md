@@ -8,13 +8,11 @@ comments: false
 mathjax: true
 ---
 
-**Role:** Security Analyst
-
-**Difficulty:** Hard
-
 **Scenario:** One of our employees attempted to install a Python package, and shortly afterward, someone logged into his work account. He doesn't know how it happened and needs your help as a forensics investigator to determine what occurred.
 
-**File Location:** C:\Users\LetsDefend\Desktop\ChallengeFile\MalPy.zip
+**Category:** Security Analyst
+
+**Difficulty:** Hard
 
 # Task 1
 **Question**: The attacker downloaded a malicious package. What is the full URL?
