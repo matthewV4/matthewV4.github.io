@@ -19,11 +19,11 @@ mathjax: true
 # Task 1
 **Question**: The attacker downloaded a malicious package. What is the full URL?
 
-Given a KAPE Triage, one thing that I always do first is inspect the provided Master File Table file with the MFTExplorer tool by Eric Zimmerman. The NTFS contains this $MFT which stores metadata about all files and directories on an NTFS volume. Looking at the users on the volume one that stands out the msot is the "Administrator" user. Inspecting the administrator's directories and files we come across some interesting files within the Download directory:
+Given a KAPE Triage, one of the first things I always do is inspect the provided Master File Table (MFT) using the MFTExplorer tool by Eric Zimmerman. The NTFS file system contains the $MFT, which stores metadata about all files and directories on the volume. Upon examining the users on the volume, the one that stands out the most is the "Administrator" user. While inspecting the Administrator's directories and files, we come across some interesting files within the Downloads directory:
 
 ![image](/assets/img/SPF1.png)
 
-Given what we know about a malicipius python package being installed to the system, we are on the right track. To find the URL that was responsbile for this malicious package, we can find it through MFTExplorer 
+Given what we know about a malicious Python package being installed on the system, we are on the right track. To identify the URL responsible for downloading this malicious package, we can locate it using MFTExplorer:
 
 ![image](/assets/img/SPF2.png)
 
@@ -34,6 +34,8 @@ https://github.com/0xMM0X/peloton
 # Task 2: 
 **Question**: What is the name and version of the downloaded package?
 
+While navigating the "pelaton-main" folder, we come across a PKG-INFO file that contains information about the package, specifically the name and version:
+
 ![image](/assets/img/SPF3.png)
 
 ~~~
@@ -42,6 +44,8 @@ peloton-client123:0.8.10
 
 # Task 3:
 **Question**: What is the exact time that this package was downloaded?
+
+By locating the SI_CREATED_ON timestamp, we can determine when the package was initially downloaded onto the system
 
 ![image](/assets/img/SPF4.png)
 
@@ -52,9 +56,15 @@ peloton-client123:0.8.10
 # Task 4: 
 **Question**: What file in the package contains malicious code?
 
+Looking at the Administrator's previous ran PowerShell commands, the "setup.py" is of interest as it is being executed directly from the malicious pelaton-main  directory. 
+
 ![image](/assets/img/SPF5.png)
 
+Opening the setp.py file we find the following: 
+
 ![image](/assets/img/SPF6.png)
+
+Here, we see base64-encoded information, which is a red flag. We can proceed by decoding it to understand what the file is actually doing. After reversing the encoded data, decoding it from base64, and adding a recipe for Zlib Inflate, we get the following:
 
 ![image](/assets/img/SPF7.png)
 
@@ -74,9 +84,11 @@ temp_file.zip
 # Task 6: 
 **Question**: When did the zip file get deleted?
 
-For this task, we can navigate to oour $J (Journal) file and filter for "temp_file.zip" to find out when it was deleted. We can parse the $J file into a CSV and inport it into Timeline Explorer doing the following:
+For this task, we can navigate to our $J (Journal) file and filter for "temp_file.zip" to find out when it was deleted. We can parse the $J file into a CSV and import it into Timeline Explorer by doing the following:
 
 ![image](/assets/img/SPF9.png)
+
+Searching for the file, we find the "FileDelete" header, which, as the name implies, tells us when a file was deleted.
 
 ![image](/assets/img/SPF10.png)
 
@@ -98,7 +110,7 @@ Login Data
 # Task 8: 
 **Question**: The stolen file contains some sensitive data. What is the full URL of the website and the victim’s username?
 
-To find out the victim's user and the URL, we can open the "Login Data" SQLlite file that was exfiltrated:
+To find out the victim's user and the URL, we can open the "Login Data" SQLite file that was exfiltrated:
 
 ![image](/assets/img/SPF13.png)
 
