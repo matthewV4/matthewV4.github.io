@@ -7,7 +7,6 @@ tags: LetsDefend, Windows, Security Analyst
 comments: false
 mathjax: true
 ---
-
 **Scenario:** One of our employees attempted to install a Python package, and shortly afterward, someone logged into his work account. He doesn't know how it happened and needs your help as a forensics investigator to determine what occurred.
 
 **Category:** Security Analyst
