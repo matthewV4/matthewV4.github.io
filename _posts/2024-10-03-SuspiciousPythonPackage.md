@@ -27,29 +27,42 @@ Given what we know about a malicipius python package being installed to the syst
 
 ![image](/assets/img/SPF2.png)
 
-# Task 2: What is the name and version of the downloaded package?
+# Task 2: 
+**Question**: What is the name and version of the downloaded package?
 ![image](/assets/img/SPF3.png)
 
-# Task 3: What is the exact time that this package was downloaded?
+# Task 3:
+**Question**: What is the exact time that this package was downloaded?
 ![image](/assets/img/SPF4.png)
 
-# Task 4: What file in the package contains malicious code?
+# Task 4: 
+**Question**: What file in the package contains malicious code?
 ![image](/assets/img/SPF5.png)
 ![image](/assets/img/SPF6.png)
 ![image](/assets/img/SPF7.png)
 
-# Task 5: What was the name of the archive file created for exfiltration and then deleted?
+# Task 5:
+**Question**: What was the name of the archive file created for exfiltration and then deleted?
 ![image](/assets/img/SPF8.png)
 
-# Task 6: When did the zip file get deleted?
+# Task 6: 
+**Question**: When did the zip file get deleted?
 For this task, we can navigate to oour $J (Journal) file and filter for "temp_file.zip" to find out when it was deleted. We can parse the $J file into a CSV and inport it into Timeline Explorer doing the following:
 ![image](/assets/img/SPF9.png)
+![image](/assets/img/SPF10.png)
+![image](/assets/img/SPF11.png)
 
-# Task 7: When did the zip file get deleted?
+# Task 7: 
+**Question**: What exactly did the attacker steal from the victim's machine? (Name of the file)
+![image](/assets/img/SPF12.png)
 
-# Task 8: What exactly did the attacker steal from the victim's machine? (Name of the file)
+# Task 8: 
+**Question**: The stolen file contains some sensitive data. What is the full URL of the website and the victim’s username?
+To find out the victim's user and the URL, we can open the "Login Data" SQLlite file that was exfiltrated:
+![image](/assets/img/SPF13.png)
+![image](/assets/img/SPF14.png)
 
-# Task 9: The stolen file contains some sensitive data. What is the full URL of the website and the victim’s username?
-
-# Task 10: What is the IP and PORT number of the attacker C2?
+# Task 9: 
+**Question**: What is the IP and PORT number of the attacker C2?
+![image](/assets/img/SPF15.png)
 
