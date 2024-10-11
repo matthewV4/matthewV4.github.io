@@ -14,7 +14,7 @@ mathjax: true
 **Scenario:** Our EDR software was triggered, alerted, and isolated a web server for suspicious use of the “nltest.exe” command. Investigate the Windows Event logs to determine what occurred.
 
 # Task 1
-**Question**: 
+**Question**: The testing process utilizes a third-party service to determine if the server is susceptible to remote code execution. What is the complete URL of the third-party service?
 
 We can start by reviewing the oldest events in the provided Windows Event Logs, which reveals a malicious PowerShell command being ran. 
 
