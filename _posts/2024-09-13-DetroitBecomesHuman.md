@@ -129,7 +129,6 @@ In the staging directory, we can identify the small-sized .js file and can find 
 
 ![image](/assets/img/detroit10.png)
 
-![image](/assets/img/detroit11.png)
 
 ~~~
 3E90C00
@@ -140,22 +139,12 @@ In the staging directory, we can identify the small-sized .js file and can find 
 
 Once again, in the Details panel, we can find the ASCII representation of the file, which provides crucial information. This data can be forwarded to the RE/MA team for further analysis.
 
-![image](/assets/img/detroit12.png)
+![image](/assets/img/detroit11.png)
 
 ~~~
 varisContentScriptExecuted=localStorage.getItem(‘contentScriptExecuted’);if(!isContentScriptExecuted){chrome.runtime.sendMessage({action:’executeFunction’},function(response){localStorage.setItem(‘contentscriptExecuted’,true);});}
 ~~~
 
-# Task 13
-**Question:** Recover the contents of this js file so we can forward this to our RE/MA team for further analysis and understanding of this infection chain. To sanitize the payload, remove whitespaces.
-
-Once again, in the Details panel, we can find the ASCII representation of the file, which provides crucial information. This data can be forwarded to the RE/MA team for further analysis.
-
-![image](/assets/img/detroit12.png)
-
-~~~
-varisContentScriptExecuted=localStorage.getItem(‘contentScriptExecuted’);if(!isContentScriptExecuted){chrome.runtime.sendMessage({action:’executeFunction’},function(response){localStorage.setItem(‘contentscriptExecuted’,true);});}
-~~~
 
 # Task 13
 **Question:** Upon seeing no AI Assistant app being run, alonzo tried searching it from file explorer. What keywords did he use to search?
@@ -164,7 +153,7 @@ varisContentScriptExecuted=localStorage.getItem(‘contentScriptExecuted’);if(
 
 To filter through what the user may have searched in File Explorer, we can give RegRipper a try. RegRipper is a tool for parsing Windows registry files, and, in this case, it can be used to retrieve search queries made by the user in File Explorer. Specifically, we can leverage the user’s NTUSER.DAT file, which stores user-specific registry settings, and the WordWheelQuery plugin, to extract the most recent search terms entered by the user.
 
-![image](/assets/img/detroit13.png)
+![image](/assets/img/detroit12.png)
 
 ~~~
 Task 13 Solution: Google Ai Gemini tool
@@ -176,7 +165,7 @@ Task 14 Solution: 2024–03–19 04:32:11
 
 To determine when the AI Gemini file was deleted, we can navigate to the $Recycle.Bin folder in MFT Explorer. While exploring the entries in the bin, we found an entry that clearly references the AI Gemini file within its hex data. This confirms that the deleted file was indeed the malicious AI Gemini file. By looking at the metadata in the MFT Explorer, such as timestamps, we were able to determine when the file was deleted by Alonzo
 
-![image](/assets/img/detroit14.png)
+![image](/assets/img/detroit13.png)
 
 ~~~
 2024–03–19 04:34:16
