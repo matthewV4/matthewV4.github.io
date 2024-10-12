@@ -4,6 +4,8 @@ title: CrownJewel-1
 subtitle: HTB Sherlock Writeup
 gh-repo: daattali/beautiful-jekyll
 tags: HackTheBox, Windows, DFIR
+thumbnail-img: assets/img/CJT.png
+share-img: assets/img/CJT.png
 comments: false
 mathjax: true
 ---
