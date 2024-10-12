@@ -4,6 +4,8 @@ title: Detroit Becomes Human
 subtitle: HTB Sherlock Writeup
 gh-repo: daattali/beautiful-jekyll
 tags: HackTheBox, Windows, DFIR
+thumbnail-img: assets/img/DBH.png
+share-img: assets/img/DBH.png
 comments: false
 mathjax: true
 ---
