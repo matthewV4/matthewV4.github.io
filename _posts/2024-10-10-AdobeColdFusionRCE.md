@@ -4,6 +4,8 @@ title: Adobe ColdFusion RCE
 subtitle: LetsDefend Writeup
 gh-repo: daattali/beautiful-jekyll
 tags: LetsDefend, Windows, Security Analyst
+thumbnail-img: assets/img/CF.png
+share-img: assets/img/CF.png
 comments: false
 mathjax: true
 ---
