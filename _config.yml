@@ -21,7 +21,7 @@ author: Matthew Schramm
 
 navbar-links:
   Resume: assets/Resume.pdf
-  Projects: projects.md
+#  Projects: projects.md
 #  Resources:
 #    - Beautiful Jekyll: "https://beautifuljekyll.com"
  #   - Learn markdown: "https://www.markdowntutorial.com/"
