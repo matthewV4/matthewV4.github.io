@@ -4,6 +4,8 @@ title: Suspicious Python Package
 subtitle: LetsDefend Writeup
 gh-repo: daattali/beautiful-jekyll
 tags: LetsDefend, Windows, Security Analyst
+thumbnail-img: assets/img/PPACK.jpg
+share-img: assets/img/PPACK.jpg
 comments: false
 mathjax: true
 ---
