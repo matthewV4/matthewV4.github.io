@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Advanced C2 Infrastructure Setup
-subtitle: 
+subtitle: Oh yes
 gh-repo: daattali/beautiful-jekyll
 tags: Red Team, Offensive
 thumbnail-img: 
